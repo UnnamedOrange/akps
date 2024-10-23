@@ -19,7 +19,6 @@ endif()
 set_target_properties(akps-example PROPERTIES
   WIN32_EXECUTABLE FALSE
 )
-target_precompile_headers(akps-example PRIVATE "src/pch.hpp")
 target_link_libraries(akps-example PRIVATE
   ${CMAKE_PROJECT_NAME}
 )
