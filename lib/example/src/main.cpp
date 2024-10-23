@@ -9,7 +9,7 @@
  * See the LICENSE file in the repository root for full license text.
  */
 
-#include "pch.hpp"
+#include <akps/akps.hpp>
 
 int main() {
     // This is the example of akps core library.

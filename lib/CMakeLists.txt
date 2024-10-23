@@ -13,16 +13,16 @@ project(akps
   LANGUAGES CXX
 )
 
-file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "inc/*")
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "include/*")
 add_library(${CMAKE_PROJECT_NAME} INTERFACE "${SOURCES}")
 target_compile_features(${CMAKE_PROJECT_NAME} INTERFACE cxx_std_20)
 target_include_directories(${CMAKE_PROJECT_NAME}
   INTERFACE
-    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>"
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
 )
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
   PUBLIC_HEADER
-    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>/"
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>/"
 )
 
 add_subdirectory("example/")
